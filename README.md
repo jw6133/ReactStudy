@@ -41,3 +41,10 @@ Count를 변경하려면, count를 let으로 지정한 변수에 넣어서 변�
  여튼 위의 문법을 사용해서 const [counter, modifier]= React.useState();를 구현할 때, modifier를 사용함으로써 우리가 직접 counter를 변경하는 방법을 썼을때의 문제인
  재랜더링해줘야하는 문제점을 해결해줌
  modifier()는 괄호 안의 값으로 counter를 업데이트하고 랜더링까지 다시해줌. ==>문제해결
+
+7/21 ~3.7
+Recap
+
+counter + 1 = (current) => current + 1 *current는 현재의 값을 전달해주는 "함수"로 생각해야 함.
+setCounter라는 함수에 현재값을 전달해주는 current라는 함수를 전달하는 것임.
+unit converter (유닛 변환기 : 분을 넣으면 시간으로 변환해주거나 km를 넣으면 마일로 변환해주는 장치 (예시임)) 
