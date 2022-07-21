@@ -48,3 +48,14 @@ Recap
 counter + 1 = (current) => current + 1 *current는 현재의 값을 전달해주는 "함수"로 생각해야 함.
 setCounter라는 함수에 현재값을 전달해주는 current라는 함수를 전달하는 것임.
 unit converter (유닛 변환기 : 분을 넣으면 시간으로 변환해주거나 km를 넣으면 마일로 변환해주는 장치 (예시임)) 
+<label>은 for(js용어)을 이용해 다른 요소와 연결 for="다른 요소 id" (단, HTML 한정)
+onChange = 입력 이벤트
+input의 값을 받아오려면, js에서 했던거처럼 이벤트함수에 event라고 argument(인수)를 주면, 거기에 document가 생김.
+그럼 그 document 안의 요소 중 input의 값이 있음. 그건 event.target.value임.
+**SetState를 통한 업데이트**
+
+input에는 2가지 event처리요소가 필요하다. 1 : event감지 2 : event 감지 후 역할 수행 및 업데이트
+
+const onFlip = () => setFlipped(current => !current); 현재값인 current에 현재값의 반대되는 값인 !current를 삽입하므로써 Flip.
+기본값이 false이므로 disabled={flipped === false}인 Hour는 작동이 안되지만, onflip이 발동하면 값이 false의 반대인 true가 되므로 disable 프로퍼티도 false가 됨 == 작동.
+삼항연산자 : 항이 세개인 연산자 ex) (5 > 3)? 1 : 0 ===> 5가 3보다 클땐 1. 아니면 0  맞을때의 값 : 틀릴때의 값인 느낌.
