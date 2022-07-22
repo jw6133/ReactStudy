@@ -59,3 +59,15 @@ input에는 2가지 event처리요소가 필요하다. 1 : event감지 2 : event
 const onFlip = () => setFlipped(current => !current); 현재값인 current에 현재값의 반대되는 값인 !current를 삽입하므로써 Flip.
 기본값이 false이므로 disabled={flipped === false}인 Hour는 작동이 안되지만, onflip이 발동하면 값이 false의 반대인 true가 되므로 disable 프로퍼티도 false가 됨 == 작동.
 삼항연산자 : 항이 세개인 연산자 ex) (5 > 3)? 1 : 0 ===> 5가 3보다 클땐 1. 아니면 0  맞을때의 값 : 틀릴때의 값인 느낌.
+
+7/22 ~4.0
+<select> : html 요소로, <obtion>과 함께 사용함.;
+예시 : <select value={index} onChange={onSelect}>
+                <option value="xx">Select your Units.</option>
+                <option value="0">Minute & Hours</option>
+                <option value="1">Km & Miles</option>
+            </select>
+         이 index는 위에 지정해놓은 const[a,b]=React.useState(0);의 a로 들어가서 b를 통해 조작됨.
+props = <Btn source="Save Changes" /> ==> Btn(props)를 하면, source가 props칸에 들어가는 형식. 함수를 지정하고 아래에서 컴포넌트로 사용하면, 
+         함수에 존재하는 props가 컴포넌트로 사용한 곳에서 지정한 요소로 변하는 느낌.
+        사용법 : {props.source} (object로 전달되기 때문.)
