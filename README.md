@@ -76,3 +76,11 @@ props = <Btn source="Save Changes" /> ==> Btn(props)를 하면, source가 props�
 prop을 전달해줘도, 따로 적용시키지 않으면 React는 알아서 적용시켜주지 않음.
 컴포넌트 사용때 prop으로 전달. => 컴포넌트의 근원지인 함수에서 argument로 prop 받음 => 함수 내용에서 argument로 받은 prop을 적용.
 memo : const MemorizedBtn = React.memo(Btn);로, btn 컴포넌트의 실행을 "기억"(memo)하고 반복되는게 있으면 다음부터 실행하지 않음.
+
+proptypes => Btn.propTypes={
+    text: PropTypes.string.isRequired,
+    fontSize: PropTypes.number
+}
+         ㄴ> text는 string으로, fontSize는 숫자로 규칙 설정. 어길 시, 오류 메세지 출력. 
+         조건에 .isRequired를 붙이면, 필수적 요소가 되어 존재하지 않을 시 오류 메세지 출력.
+함수 argument에 fontSize = 16 이라고 =16을 따로 붙여주면 그게 기본값이됨.
