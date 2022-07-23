@@ -71,3 +71,8 @@ const onFlip = () => setFlipped(current => !current); 현재값인 current에 �
 props = <Btn source="Save Changes" /> ==> Btn(props)를 하면, source가 props칸에 들어가는 형식. 함수를 지정하고 아래에서 컴포넌트로 사용하면, 
          함수에 존재하는 props가 컴포넌트로 사용한 곳에서 지정한 요소로 변하는 느낌.
         사용법 : {props.source} (object로 전달되기 때문.)
+
+7/23 ~4.3
+prop을 전달해줘도, 따로 적용시키지 않으면 React는 알아서 적용시켜주지 않음.
+컴포넌트 사용때 prop으로 전달. => 컴포넌트의 근원지인 함수에서 argument로 prop 받음 => 함수 내용에서 argument로 받은 prop을 적용.
+memo : const MemorizedBtn = React.memo(Btn);로, btn 컴포넌트의 실행을 "기억"(memo)하고 반복되는게 있으면 다음부터 실행하지 않음.
