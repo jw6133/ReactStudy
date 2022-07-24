@@ -84,3 +84,9 @@ proptypes => Btn.propTypes={
          ㄴ> text는 string으로, fontSize는 숫자로 규칙 설정. 어길 시, 오류 메세지 출력. 
          조건에 .isRequired를 붙이면, 필수적 요소가 되어 존재하지 않을 시 오류 메세지 출력.
 함수 argument에 fontSize = 16 이라고 =16을 따로 붙여주면 그게 기본값이됨.
+
+7/24 ~6.0
+기존 진행상황 초기화 후 nodejs 설치 후 nodejs 기본 틀에서 작업 시작.
+css 요소중 하나만 따로 적용하기 => .Btn을 css 에서 생성 이후
+import styled from "./Button.module.css"; ===>  <button className={styles.btn}>{text}</button>; 처럼 classname으로 특정 하나 지정해서 적용시킴.
+단, css의 파일 이름은 ㅁㅁㅁ.module.css 로 뒤에 모듈.css 를 붙여야함.
