@@ -85,8 +85,13 @@ proptypes => Btn.propTypes={
          조건에 .isRequired를 붙이면, 필수적 요소가 되어 존재하지 않을 시 오류 메세지 출력.
 함수 argument에 fontSize = 16 이라고 =16을 따로 붙여주면 그게 기본값이됨.
 
-7/24 ~6.0
+7/24 ~5.2
 기존 진행상황 초기화 후 nodejs 설치 후 nodejs 기본 틀에서 작업 시작.
 css 요소중 하나만 따로 적용하기 => .Btn을 css 에서 생성 이후
 import styled from "./Button.module.css"; ===>  <button className={styles.btn}>{text}</button>; 처럼 classname으로 특정 하나 지정해서 적용시킴.
 단, css의 파일 이름은 ㅁㅁㅁ.module.css 로 뒤에 모듈.css 를 붙여야함.
+
+7/27 ~6.0
+문제제시 : 다른 state가 재실행될때, rerender되기 원하지 않는 "컴포넌트"가 있을 수 있음. (상시 떠있는 날씨 정보같은거)
+
+useEffect(a,b) a=처음 렌더링할때만 실행할거(한번만 실행할거) b=[] 빈 배열
