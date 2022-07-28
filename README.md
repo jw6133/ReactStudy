@@ -95,3 +95,11 @@ import styled from "./Button.module.css"; ===>  <button className={styles.btn}>{
 문제제시 : 다른 state가 재실행될때, rerender되기 원하지 않는 "컴포넌트"가 있을 수 있음. (상시 떠있는 날씨 정보같은거)
 
 useEffect(a,b) a=처음 렌더링할때만 실행할거(한번만 실행할거) b=[] 빈 배열
+
+7/28 ~6.4
+useEffect(() => {
+    console.log("I run when 'keyword' changes.");
+  }, [keyword]); []는 안의 내용이 변화할때. a를 실행시켜주는 "조건"의 역할을 함.
+  단, a에 if문으로 추가적으로 조건을 걸수도 있음 =조건이 2개
+  
+  useEffect(code,dependencies=감시대상)
