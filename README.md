@@ -102,4 +102,18 @@ useEffect(() => {
   }, [keyword]); []는 안의 내용이 변화할때. a를 실행시켜주는 "조건"의 역할을 함.
   단, a에 if문으로 추가적으로 조건을 걸수도 있음 =조건이 2개
   
-  useEffect(code,dependencies=감시대상)
+  useEffect(code,dependencies=감시대상ㄻㄷㅈㄹㅈㄷㄹ
+useEffect의 기본적인 형태 = usfEffect(function,[]);
+funtion = a라 하겠음.
+         
+a가 다른 함수를 return하면, return되는 함수가 useEffect로 출력되는 컴포넌트가 "삭제"될때 실행됨.
+    예시)     function Hello() {
+  useEffect(function () {
+    console.log("hi :)");
+    return function () {
+      console.log("bye :(");
+    };
+  }, []);
+         
+         
+         
