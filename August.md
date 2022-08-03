@@ -10,3 +10,6 @@ react로 todo list를 만들고, li를 map으로 추가하는 것을 state를 �
 fetch() 함수는 첫번째 인자로 URL, 두번째 인자로 옵션 객체를 받고, Promise 타입의 객체를 반환합니다. 반환된 객체는, API 호출이 성공했을 경우에는 응답(response) 객체를 resolve하고, 실패했을 경우에는 예외(error) 객체를 reject합니다.
  fetch("https://api.coinpaprika.com/v1/tickers")
       .then((response) => response.json())
+
+8/3 7.3
+.then()은 . 앞에거가 발동되면 다음으로 발동되는 함수로, 자주 써왔지만 요즘은 이거보단 async()를 더 쓴다고 한다.
